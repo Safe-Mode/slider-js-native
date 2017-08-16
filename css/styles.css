@@ -1,0 +1,90 @@
+#gallery {
+	position: relative;
+    width: 640px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#gallery .photos {
+	position: relative;
+	left: 0;
+	width: 20000px;
+	font-size: 0;
+
+	transition: left 1s;
+}
+
+#gallery .photos img {
+	width: 640px;
+}
+
+#gallery .buttons .btn {
+	position: absolute;
+	top: 50%;
+	width: 50px;
+	height: 100px;
+	border: none;
+	outline: none;
+	font-size: 0;
+	background-color: #f8f8f8;
+	transform: translateY(-50%);
+	opacity: 0.2;
+	cursor: pointer;
+	transition: 0.6s;
+}
+
+#gallery .buttons .btn:hover {
+	opacity: 0.4;
+}
+
+#gallery .buttons .btn:active {
+	opacity: 0.2;
+}
+
+#gallery .buttons .btn::before,
+#gallery .buttons .btn::after {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 5px;
+	background-color: #000;
+}
+
+#gallery .buttons .prev {
+	left: 0;
+}
+
+#gallery .buttons .prev::before,
+#gallery .buttons .prev::after {
+	left: 5px;
+}
+
+#gallery .buttons .prev::before {
+	bottom: 39px;
+	transform: rotate(45deg);
+}
+
+#gallery .buttons .prev::after {
+	top: 39px;
+	transform: rotate(-45deg);
+}
+
+#gallery .buttons .next {
+	right: 0;
+}
+
+#gallery .buttons .next::before,
+#gallery .buttons .next::after {
+	right: 5px;
+}
+
+#gallery .buttons .next::before {
+	bottom: 39px;
+	transform: rotate(-45deg);
+}
+
+#gallery .buttons .next::after {
+	top: 39px;
+	transform: rotate(45deg);
+}
